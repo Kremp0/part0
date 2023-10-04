@@ -2,5 +2,6 @@
 sequenceDiagram
     participant browser
     participant server
-    GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
 ```
