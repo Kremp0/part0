@@ -28,5 +28,13 @@ sequenceDiagram
     server-->>browser: favicon file (404 status)
     deactivate server
 
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    server-->>browser: HTML document (status 302)
+    deactivate server
+    
+    Note right of browser: User types a meessage to a form and send it. The browser then use POST method and send it to server. The whole page isn't refreshed like in the previous example.
+
     
 ```
